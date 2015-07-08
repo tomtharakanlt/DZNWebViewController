@@ -95,12 +95,7 @@ static char DZNWebViewControllerKVOContext = 0;
 {
     [super viewWillAppear:animated];
     
-    [UIView performWithoutAnimation:^{
-        static dispatch_once_t willAppearConfig;
-        dispatch_once(&willAppearConfig, ^{
-            [self configureToolBars];
-        });
-    }];
+    [self configureToolBars];
     
     if (!self.webView.URL) {
         [self loadURL:self.URL];
