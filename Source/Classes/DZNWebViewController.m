@@ -106,10 +106,7 @@ static char DZNWebViewControllerKVOContext = 0;
 {
     [super viewDidAppear:animated];
     
-    static dispatch_once_t didAppearConfig;
-    dispatch_once(&didAppearConfig, ^{
-        [self configureBarItemsGestures];
-    });
+    [self configureBarItemsGestures];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
