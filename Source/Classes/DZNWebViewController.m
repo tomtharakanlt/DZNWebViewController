@@ -663,8 +663,6 @@ static char DZNWebViewControllerKVOContext = 0;
 - (void)webView:(DZNWebView *)webView didFinishNavigation:(WKNavigation *)navigation
 {
     [self updateToolbarItems];
-    
-    self.title = self.webView.title;
 }
 
 - (void)webView:(DZNWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error
